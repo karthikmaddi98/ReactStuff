@@ -1,0 +1,32 @@
+{
+  "name": "react-course",
+  "version": "1.0.0",
+  "description": "My First React Project",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karthikmaddi98/ReactStuff.git"
+  },
+  "keywords": [],
+  "author": "Karthik Maddi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karthikmaddi98/ReactStuff/issues"
+  },
+  "homepage": "https://github.com/karthikmaddi98/ReactStuff#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist" : [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Edge versions"
+  ]
+}
