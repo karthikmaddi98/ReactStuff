@@ -13,3 +13,9 @@
 - Consistent Hashing
 - Code splitting
 - Differential Bundling - support older browsers
+- Diagnostics
+- Good Error Handling
+- HTTPS
+- Reliable Caching
+- Tree Shaking - Remove unused code
+- Differenet dev and prod bundles
