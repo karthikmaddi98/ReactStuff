@@ -1,85 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-/**
- * Header
- *  - Logo
- *  - Nav Items
- * Body
- *  - Serach
- *  - RestaurantContainer
- *     - Restro Cards
- *          - Img
- *          - Name of Res, Rating, Cuisine, delivery time
- * Footer
- *  - CopyRight
- *  - Links
- *  - Address
- *  - Contact
- */
-
-const Header = () => {
-    return (
-        <div className="header">
-            <div className="logo-container">
-                <img
-                    className="logo"
-                    src="https://cdn.dribbble.com/users/1635051/screenshots/4291569/media/37f248faab6fa8df62c797c590385fbf.png" 
-                />
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-
-        </div>
-    )
-};
-
-const RestaurantCard = (props) => {
-    const { resData } = props;
-    return (
-        <div className="res-card" style={{ backgroundColor: "#f0f0f0"}}>
-            <img 
-                className="res-logo"
-                alt="res-logo"
-                src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_360,h_300/"+resData.info.cloudinaryImageId}
-            />
-            <h3>{resData.info.name}</h3>
-            <h4>{resData.info.cuisines.join(", ")}</h4>
-            <h4>{resData.info.avgRating} stars</h4>
-            <h4>{resData.info.costForTwo}</h4>
-            <h4>{resData.info.deliveryTime}</h4>
-
-
-        </div>
-    )
-}
-const resObj = {
-        type: "restaurants",
-        id: "822315",
-        name: "Subway",
-        locality: "Langford Road",
-        areaName: "Richmond Town",
-        costForTwo: "₹350 for two",
-        cuisines: [
-          "Salads",
-          "Snacks",
-          "Desserts",
-          "Beverages"
-        ],
-        avgRating: 4.4,
-        deliveryTime:  "20-25 mins",
-        cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/8/2/1776fa6d-0969-4a43-a0d3-378ca449cede_822315.jpg",
-      };
-
-const resList = {
-
-    restaurants: [
+const resList = [
                   {
                     "info": {
                       "id": "822315",
@@ -2031,45 +1950,29 @@ const resList = {
                       "type": "WEBLINK"
                     }
                   }
-                ]
-                
 
+ ];
 
-    };
-
-// not using keys (not acceptable) <<<< Index as key <<<<<<< unique key (best practice)
-
-const Body = () => {
-    return (
-        <div className="body">
-            <div className="search">
-                Search
-            </div>
-            <div className="res-container">
-                {/* <RestaurantCard resData={resList.restaurants[0]} />
-                <RestaurantCard resData={resList.restaurants[1]} /> */}
-                 {resList.restaurants.map(
-                    (restaurant) =>  (<RestaurantCard key={restaurant.info.id} resData={restaurant} />)
-                )
-            }
-                
-            </div>
-
-        </div>
-
-    )
-};
-
-const AppLayout = () => {
-    return (
-        <div className="app">
-            <Header />
-            <Body />
-
-        </div>
-    )
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render
-root.render(<AppLayout />);
+  // const resObj = {
+  //         type: "restaurants",
+  //         id: "822315",
+  //         name: "Subway",
+  //         locality: "Langford Road",
+  //         areaName: "Richmond Town",
+  //         costForTwo: "₹350 for two",
+  //         cuisines: [
+  //           "Salads",
+  //           "Snacks",
+  //           "Desserts",
+  //           "Beverages"
+  //         ],
+  //         avgRating: 4.4,
+  //         deliveryTime:  "20-25 mins",
+  //         cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/8/2/1776fa6d-0969-4a43-a0d3-378ca449cede_822315.jpg",
+  //       };
+  
+  
+  
+  // not using keys (not acceptable) <<<< Index as key <<<<<<< unique key (best practice)
+  
+  export default resList;
